@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+}
+
+.box{
+    display: flex;
+    width: 50vw;
+    justify-content: space-around;
+    align-items: center;
+}
+.call{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caller-icon{
+    height: 35px;
+    width: 35px;
+}
+
+.service{
+    margin-left: 10px;
+} 
+
+.button{
+    height: 35px;
+    border-radius: 15px;
+    background-color: transparent;
+}

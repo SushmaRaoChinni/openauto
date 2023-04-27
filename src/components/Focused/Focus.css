@@ -1,0 +1,25 @@
+.head{
+    text-align: right;
+    justify-content: flex-end;
+    
+}
+
+.paragraph{
+    text-align: left;
+}
+
+.button{
+   text-align: end;
+}
+.focus{
+    background-color: black;
+  display: flex;
+}
+
+.phone{
+    width: 60%;
+  max-width: 400px;
+  margin-left: 85px
+}
+  
+
