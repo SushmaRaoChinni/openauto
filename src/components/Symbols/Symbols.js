@@ -3,6 +3,8 @@ import {IoIosCall} from 'react-icons/io'
 import {CiMail} from 'react-icons/ci'
 import './Symbols.css'
 
+
+
 function Symbols() {
   return (
     <div className='container'>
@@ -18,8 +20,13 @@ function Symbols() {
     <div className='call'>
     <CiMail className='caller-icon'/>
     <h6 className='services'>service@openauto.ca</h6>
+  
+  
+    
     
     </div>
+   
+    
     
     </div>
     </div>

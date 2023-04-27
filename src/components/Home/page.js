@@ -1,14 +1,23 @@
-import React from 'react'
+import  { useState } from 'react'
 import './page.css';
-import {FiFacebook} from 'react-icons/fi'
-import {FiTwitter} from 'react-icons/fi'
-import {FiYoutube} from 'react-icons/fi'
-import {AiFillLinkedin} from 'react-icons/ai'
-import {BsInstagram} from 'react-icons/bs';
 import map from '../../assets/Pickup_Illustration.png'
+import Axios from 'axios'
 
 
-const pages =() => {
+const Pages = () => {
+
+  const [Name, setName] = useState('');
+  const [Email, setEmail] = useState('');
+
+  const login = (e) =>{
+    e.preventDefault();
+
+    Axios.post("http://localhost:3300/register",{userName:Name, userMail:Email}).then((response)=>{
+      console.log(response);
+  })
+  setName('')
+  setEmail('')
+  }
   return (
     
     <div className='cl'>
@@ -19,14 +28,22 @@ const pages =() => {
     <p className='para'>
       Open Auto Soothes the hassle OF maintaining your vehicle and helps you deal with unexpected repairs worry free
     </p>
-    <button className='name'>Enter  your name</button><br/>
+    <form onClick={login}>
+    <input className='name' onChange={(e)=>
+    setName(e.target.value)}></input><br/>
     <br/>
-    <button className='name'>Enter  your email</button><br/>
+    <input className='name'  onChange={(e)=>
+    setEmail(e.target.value)}></input><br/>
     <br/>
-    <button className='sub'>submit</button>
+    
+    <button type="button" className='sub'>submit</button>
+    </form>
     </div>
+    
+    
     <img src={map} className='map' alt="map"/>
     <div className='cl'>
+    
     
     </div>
     
@@ -37,4 +54,4 @@ const pages =() => {
   )
 }
 
-export default pages
+export default Pages
